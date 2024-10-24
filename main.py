@@ -219,7 +219,7 @@ def generate_card_endpoint():
     print(time)
     source = data.get('source', '')
     zoom = int(data.get('zoom', 2))  # 缩放比例，默认为 2，1~5
-    css_selector = int(data.get('css_selector', 1))  # 选择css样式，默认为空
+    css_selector = int(data.get('css_selector', 1))  # 选择css样式，默认为1
     align_value = data.get('align_value', 'start')  # 文本对齐方式，默认为左对齐
     print(content, title, name, timestamp, source, zoom, css_selector)
 
