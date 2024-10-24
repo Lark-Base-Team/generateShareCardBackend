@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Markdown 卡片实时预览</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        />
+
+        <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles/card.css') }}"> -->
+        <link rel="stylesheet" type="text/css" href="{{ css_url }}" />
+    </head>
+    <body>
+        <!-- <div id="cardPreview" contenteditable="true" class="placeholder" onfocus="removePlaceholder()" onblur="setPlaceholder()" oninput="updatePreview()">
+    在这里输入文字支持 Markdown...
+</div> -->
+
+        <div class="container">
+            <div class="preview">
+                <div class="exhibit">
+                    <div class="html-box">
+                        <div class="content-exhibit">
+                            <div class="content-exhibit-header">
+                                <!--用户名输入框-->
+                                <div class="content-exhibit-header-title">
+                                    <!-- <div  class="avatar" ><img src="alt="></div> -->
+                                    <!--为插入图片，这种情况下会导致html2canvas无法正常绘图-->
+                                    <p
+                                        class="content-exhibit-header-title-name bilingual-text"
+                                        contenteditable=""
+                                    >
+                                        {{ name }}
+                                    </p>
+                                </div>
+                            </div>
+                            <!--标题输入框-->
+                            <div
+                                class="content-title-box"
+                                style="text-align: {{ align_value }};"
+                            >
+                                <p
+                                    id="title"
+                                    contenteditable=""
+                                    class="content-title bilingual-text"
+                                    onfocus="removePlaceholder('title', '在这里填写标题')"
+                                    onblur="setPlaceholder('title', '在这里填写标题')"
+                                >
+                                    {{ title }}
+                                </p>
+                            </div>
+                            <!--主要内容输入框-->
+                            <div
+                                class="editor-content"
+                                style="text-align: {{ align_value }};"
+                            >
+                                <p
+                                    id="content"
+                                    contenteditable="true"
+                                    class="editor-content-text bilingual-text"
+                                    onfocus="removePlaceholder('content', '在这里填写内容')"
+                                    onblur="setPlaceholder('content', '在这里填写内容')"
+                                >
+                                    {{ content|safe }}
+                                </p>
+                            </div>
+                            <div class="content-exhibit-footer">
+                                <!--文本来源框-->
+                                <div class="c-input">
+                                    <p
+                                        id="text-source"
+                                        contenteditable="true"
+                                        class="c-input-text bilingual-text"
+                                        onfocus="removePlaceholder('text-source', '在这里标记文字来源')"
+                                        onblur="setPlaceholder('text-source', '在这里标记文字来源')"
+                                    >
+                                        {{ source }}
+                                    </p>
+                                </div>
+                                <p
+                                    class="content-exhibit-footer-time bilingual-text"
+                                    contenteditable=""
+                                >
+                                    {{ time }}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- <div style="text-align: center; margin-top: 20px;">
+        <button id="download-button" onclick="downloadCard()" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">
+            下载卡片
+        </button>
+    </div> -->
+        </div>
+
+        <!-- <script src="{{ url_for('static', filename='scripts/card.js') }}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.5.0-beta4/html2canvas.min.js"></script> -->
+    </body>
+</html>

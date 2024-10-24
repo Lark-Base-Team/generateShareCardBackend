@@ -1,0 +1,21 @@
+modules = ["web", "python-3.12", "nodejs-20"]
+
+run = ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+entrypoint = "main.py"
+hidden = [".pythonlibs"]
+
+[nix]
+channel = "stable-24_05"
+
+
+[deployment]
+run = ["gunicorn", "--bind", "0.0.0.0:5000", "main:app"]
+deploymentTarget = "cloudrun"
+
+
+[[ports]]
+localPort = 5000
+externalPort = 80
+
+[objectStorage]
+defaultBucketID = "replit-objstore-1cb8822f-c509-4288-838f-ebcab322f79d"

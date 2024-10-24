@@ -1,0 +1,174 @@
+/* 梦幻晨曦 */
+@font-face {
+  font-family: 'FZYTK';
+  src: url('../FZYTK.TTF');
+}
+
+@font-face {
+  font-family: 'FZXBS';
+  src: url('../FZXBSJW.woff2');
+}
+
+.cn-font {
+  font-family: 'FZXBS';
+  /* font-family: monospace; */
+}
+
+
+/* 容器样式 */
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  /* 可根据需要设置边距 */
+}
+
+.preview {
+  max-width: 800px;
+  /* 设置最大宽度，适合屏幕较宽时 */
+  width: 100%;
+  /* 占据父容器的 100% 宽度 */
+  padding: 20px;
+  /* 内边距，用于调整内部元素的位置 */
+  background-color: white;
+  /* 确保背景颜色 */
+  border-radius: 24px;
+  /* 圆角 */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+  /* 设置阴影效果 */
+}
+
+/* 展示区域 */
+.exhibit {
+  max-width: 10000px;
+}
+
+/* 背景颜色和样式 */
+.html-box {
+  /* 梦幻晨曦 */
+  background-image: linear-gradient(150deg, #fff5e1, #ffe0c7, #f4c1e5, #d9e4f5);
+  transition: background-image .5s ease;
+  padding: 20px;
+  /* border-radius: 24px; */
+}
+
+/* 内容展示区域 */
+.content-exhibit {
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 64px 40px;
+  padding: 20px 30px;
+  border-radius: 24px;
+  color: rgb(51, 51, 51);
+  border-radius: 24px;
+  box-shadow: 2px 4px 16px -5px rgba(0, 0, 0, 0.15);
+}
+
+/* 头部区域样式 */
+.content-exhibit-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.content-exhibit-header-title {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+
+}
+
+.avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* 用户名样式 */
+.content-exhibit-header-title-name {
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  line-height: 18px;
+  white-space: nowrap;
+  color: rgb(51, 51, 51);
+}
+
+/* 标题 */
+.content-title-box {
+  padding: 0px;
+  border-radius: 8px;
+}
+
+.content-title {
+  color: #333;
+  font-size: 30px;
+  line-height: 36px;
+  font-weight: 600;
+  margin: 0;
+  margin-top: 12px;
+  padding: 8px;
+  line-height: 1.4;
+}
+
+/* 主要文本内容 */
+.editor-content {
+  /* margin-top: 20px; */
+  padding: 0px;
+  /* border-radius: 8px;
+      */
+}
+
+.editor-content-text {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  line-height: 1.7;
+}
+
+/* 底部输入区域 */
+.content-exhibit-footer {
+  margin-top: 32px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  opacity: .7;
+}
+
+.c-input {
+  width: 70%;
+}
+
+.c-input-text {
+  padding: 8px;
+  border-radius: 8px;
+  font-size: 15px;
+  color: rgb(51, 51, 51);
+  margin: 0
+}
+
+.c-input-placeholder {
+  color: #999;
+  font-size: 15px;
+}
+
+/* 时间样式 */
+.content-exhibit-footer-time {
+  font-size: 12px;
+  color: rgb(51, 51, 51);
+  margin: 0;
+  /* border-bottom: 2px solid #fff; */
+  padding-bottom: 4px;
+  padding-top: 4px;
+}

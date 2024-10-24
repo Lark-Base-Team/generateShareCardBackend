@@ -1,0 +1,5 @@
+django-weasyprint
+pymupdf
+pillow
+Flask
+pdf2image
